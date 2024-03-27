@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum</title>
+    <style>
+        body{
+            background-color: rgb(66, 65, 65);
+            display: flex;
+            justify-content: center;margin-top: 150px;
+        }
+        .box{
+            border: 1px solid;
+            padding: 30px ; 
+            border-radius: 20px;
+            width: 250px;
+            background-color: rgb(215, 207, 207);
+        }
+        .btn { 
+			background-color: rgb(36, 36, 36); 
+			border-radius: 4px; 
+			color: #ffff; 
+			padding: 10px 25px; 
+			text-decoration: none; 
+        }
+        .btn:hover{
+            background:rgb(106, 76, 76);
+            color: whitesmoke; 
+        }
+    </style>
+
+<script lang="javascript">
+    function showSum(){
+        var x,y,s;
+        x=Number(document.frmsum.num1.value);
+        y=Number(document.frmsum.num2.value);
+        s=x+y;
+        document.frmsum.sum.value=s;
+    }
+</script>
+</head>
+<body>
+    <form class="box" name="frmsum">
+        <center><h3>Sum of two numbers</h3></center><br>
+        <label>First Number</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" placeholder="Enter First Number" id="num1"><br><br>
+        <label>Second Number</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" placeholder="Enter Second Number" id="num2"><br><br>
+        <label>Sum </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text"  title="sum" id="sum"><br><br>
+        <center><input type="button" value="Sum" class="btn" onclick="showSum()"></center>
+    </form>
+
+    
+</body>
+</html>
